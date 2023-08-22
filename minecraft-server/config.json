@@ -1,0 +1,30 @@
+{
+  "arch": [
+    "amd64",
+    "arm64",
+    "armv7"
+  ],
+  "boot": "auto",
+  "description": "Minecraft Dedicated Server (Java Edition)",
+  "environment": {
+    "EULA": "TRUE"
+  },
+  "map": [
+    "share:rw"
+  ],
+  "name": "minecraft-server",
+  "options": {},
+  "ports": {
+    "19132/udp": 19132
+  },
+  "ports_description": {
+    "19132/udp": "Api Port"
+  },
+  "schema": {},
+  "slug": "minecraft-server",
+  "startup": "services",
+  "upstream": "2023.7.1",
+  "url": "https://github.com/ruthem/HA-Addons",
+  "version": "2023.7.1",
+  "ingress": false
+}
