@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: Home Assistant Add-Ons by Ruthem
 url: 'https://github.com/ruthem/HA-Addons'
-maintainer: Ruthem <20597032+ruthem@users.noreply.github.com>
+maintainer: Ruthem
