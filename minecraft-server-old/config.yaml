@@ -1,0 +1,22 @@
+name: minecraft-server
+description: Minecraft Dedicated Server (Java Edition)
+slug: minecraft-server
+arch:
+  - amd64
+  - arm64
+  - armv7
+
+boot: auto
+environment:
+  EULA: TRUE
+map:
+  - share:rw
+ports:
+  19132/udp: 19132
+ports_description:
+  19132/udp: Api Port
+startup: services
+upstream: 2023.8.22
+url: https://github.com/ruthem/HA-Addons
+version: 2023.8.22
+ingress: false
