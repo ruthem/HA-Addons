@@ -1,0 +1,7 @@
+github_fulltag: "false"
+last_update: "28-12-2023"
+repository: "ruthem/HA-Addons"
+slug: "minecraft-server"
+source: "github"
+upstream_repo: "itzg/docker-minecraft-server"
+upstream_version: "2023.8.1"
