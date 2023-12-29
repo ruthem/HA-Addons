@@ -1,16 +1,22 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Example add-on
-version: "0.0.1"
+name: Minecraft Server
+version: "0.0.2"
 slug: minecraft-server
-description: Minecraft Server Java Edition
+description: Minecraft Dedicated Server Java Edition
 url: "https://github.com/home-assistant/addons-example/tree/main/example"
 arch:
   - amd64
 init: false
+ports:
+  - 25565/tcp: 25565
+ports_description:
+  25565/tcp: Minecraft Port
 map:
-  - share:rw
+  - addons:rw
 options:
   message: "Hello world..."
+  eula: null
 schema:
   message: "str?"
+  eula: "bool"
 #image: "ghcr.io/home-assistant/{arch}-addon-example"
