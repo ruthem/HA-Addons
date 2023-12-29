@@ -3,7 +3,7 @@ name: Minecraft Server
 version: "0.0.2"
 slug: minecraft-server
 description: Minecraft Dedicated Server Java Edition
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+url: "https://github.com/ruthem/HA-addons/tree/main/minecraft-server"
 arch:
   - amd64
 init: false
