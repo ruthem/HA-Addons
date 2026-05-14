@@ -1,33 +1,54 @@
-# Example Home Assistant add-on repository
+# HA-Addons
 
-This repository is used to share my personal addons.
+Custom Home Assistant add-ons by Ruthem.
 
 ## Add-ons
 
-This repository contains the following add-ons
+This repository contains the following add-ons:
+
+### [OpenClaw Gateway](./openclaw-gateway)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+
+OpenClaw AI Gateway — verbinde deine KI mit Home Assistant.
+Stellt eine WebSocket-Schnittstelle (Port 18789) bereit, über die OpenClaw mit HA kommunizieren kann.
+
+- s6-overlay service management
+- Alpine-based, lightweight
+- Auto-generates auth token on first start
+- Persistent workspace at `/config/openclaw`
 
 ### [Minecraft Server Java Edition](./minecraft-server)
 
 ![Supports amd64 Architecture][amd64-shield]
 
-<!--
+Minecraft Dedicated Server (Java Edition) v0.0.2.
+Läuft auf Port 25565 (Standard). Maps auf `/addons` für persistenten Welten-Speicher.
 
-Notes to developers after forking or using the github template feature:
-- While developing comment out the 'image' key from 'example/config.yaml' to make the supervisor build the addon
-  - Remember to put this back when pushing up your changes.
-- When you merge to the 'main' branch of your repository a new build will be triggered.
-  - Make sure you adjust the 'version' key in 'example/config.yaml' when you do that.
-  - Make sure you update 'example/CHANGELOG.md' when you do that.
-  - The first time this runs you might need to adjust the image configuration on github container registry to make it public
-  - You may also need to adjust the github Actions configuration (Settings > Actions > General > Workflow > Read & Write)
-- Adjust the 'image' key in 'example/config.yaml' so it points to your username instead of 'home-assistant'.
-  - This is where the build images will be published to.
-- Rename the example directory.
-  - The 'slug' key in 'example/config.yaml' should match the directory name.
-- Adjust all keys/url's that points to 'home-assistant' to now point to your user/fork.
-- Share your repository on the forums https://community.home-assistant.io/c/projects/9
-- Do awesome stuff!
- -->
+### [Minecraft Server (Old)](./minecraft-server-old)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armv7 Architecture][armv7-shield]
+
+Minecraft Dedicated Server (Java Edition) — Legacy-Version.
+Nutzt Port 19132/udp. Maps auf `/share`.
+
+---
+
+## Installation
+
+1. Gehe in Home Assistant zu **Einstellungen → Add-ons → Add-on-Store**
+2. Klicke auf die drei Punkte (⋮) → **Repositories**
+3. Füge folgende URL hinzu: `https://github.com/ruthem/HA-Addons`
+4. Die Addons erscheinen im Store und können installiert werden
+
+---
+
+## About
+
+Custom Home Assistant addons by Ruthem.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg

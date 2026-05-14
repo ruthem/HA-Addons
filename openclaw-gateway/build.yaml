@@ -1,0 +1,9 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base:latest"
+  amd64: "ghcr.io/home-assistant/amd64-base:latest"
+labels:
+  org.opencontainers.image.title: "Home Assistant Add-on: OpenClaw Gateway"
+  org.opencontainers.image.description: "OpenClaw AI Gateway Add-on"
+  org.opencontainers.image.source: "https://github.com/ruthem/HA-Addons"
+  org.opencontainers.image.licenses: "MIT"

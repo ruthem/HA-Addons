@@ -1,0 +1,9 @@
+configuration:
+  workspace_path:
+    name: Workspace Path
+    description: "Path for OpenClaw workspace files (config, memory, etc.)"
+  verbose:
+    name: Verbose Logging
+    description: "Enable verbose logging output"
+network:
+  18789/tcp: "OpenClaw Gateway WebSocket port"
