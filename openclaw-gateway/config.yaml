@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: OpenClaw Gateway
-version: "0.1.0"
+version: "0.1.1"
 slug: openclaw-gateway
 description: OpenClaw AI Gateway — verbinde deine KI mit Home Assistant
 url: "https://github.com/ruthem/HA-Addons/tree/main/openclaw-gateway"
