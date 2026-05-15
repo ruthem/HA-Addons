@@ -22,4 +22,7 @@ RUN apk add --no-cache \
 # Copy root filesystem
 COPY rootfs /
 
+# s6-overlay requires executable service scripts
+RUN chmod +x /etc/services.d/openclaw/run /etc/services.d/openclaw/finish
+
 WORKDIR /config/openclaw
