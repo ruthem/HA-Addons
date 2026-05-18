@@ -1,26 +1,83 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: OpenClaw Gateway
-version: "0.1.1"
+version: "0.2.1"
 slug: openclaw-gateway
-description: OpenClaw AI Gateway — verbinde deine KI mit Home Assistant
+description: OpenClaw AI Gateway — verbinde deine KI mit Home Assistant.
 url: "https://github.com/ruthem/HA-Addons/tree/main/openclaw-gateway"
 arch:
   - aarch64
   - amd64
+  - armv7
+startup: services
+boot: auto
 init: false
-host_network: true
 hassio_api: true
 homeassistant_api: true
+host_network: true
+ingress: true
+ingress_port: 48099
+panel_title: OpenClaw Gateway
+panel_icon: mdi:robot
 map:
+  - addon_config:rw
   - config:rw
   - share:rw
-ports:
-  18789/tcp: 18789
-ports_description:
-  18789/tcp: OpenClaw Gateway WebSocket
+  - media:rw
 options:
   workspace_path: "/config/openclaw"
-  verbose: false
+  config_path: ""
+  timezone: "UTC"
+  enable_terminal: true
+  terminal_port: 7681
+  gateway_public_url: ""
+  homeassistant_token: ""
+  http_proxy: ""
+  router_ssh_host: ""
+  router_ssh_user: ""
+  router_ssh_key_path: "/data/keys/router_ssh"
+  clean_session_locks_on_start: true
+  clean_session_locks_on_exit: true
+  gateway_mode: local
+  gateway_remote_url: ""
+  gateway_bind_mode: loopback
+  gateway_port: 18789
+  access_mode: custom
+  gateway_auth_mode: token
+  gateway_trusted_proxies: ""
+  gateway_additional_allowed_origins: ""
+  controlui_disable_device_auth: true
+  enable_openai_api: false
+  force_ipv4_dns: true
+  nginx_log_level: minimal
+  gateway_env_vars: []
+  auto_configure_mcp: false
 schema:
-  workspace_path: "str"
-  verbose: "bool"
+  workspace_path: str
+  config_path: str?
+  timezone: str
+  enable_terminal: bool?
+  terminal_port: "int(1024,65535)?"
+  gateway_public_url: str?
+  homeassistant_token: str?
+  http_proxy: str?
+  router_ssh_host: str
+  router_ssh_user: str
+  router_ssh_key_path: str
+  clean_session_locks_on_start: bool?
+  clean_session_locks_on_exit: bool?
+  gateway_mode: "list(local|remote)?"
+  gateway_remote_url: str?
+  gateway_bind_mode: "list(loopback|lan|tailnet)?"
+  gateway_port: "int(1,65535)?"
+  access_mode: "list(custom|local_only|lan_https|lan_reverse_proxy|tailnet_https)?"
+  gateway_auth_mode: "list(token|trusted-proxy)?"
+  gateway_trusted_proxies: str?
+  gateway_additional_allowed_origins: str?
+  controlui_disable_device_auth: bool?
+  enable_openai_api: bool?
+  force_ipv4_dns: bool?
+  gateway_env_vars:
+    - name: "match(^[A-Z_][A-Z0-9_]*$)"
+      value: str
+  nginx_log_level: "list(full|minimal)?"
+  auto_configure_mcp: bool?

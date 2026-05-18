@@ -1,0 +1,19 @@
+services:
+  openclaw-gateway:
+    build:
+      context: .
+      args:
+        # Use a multi-arch base image for local testing (works on both Intel and Apple Silicon Macs).
+        # To test with a specific Home Assistant base image, you can use:
+        # ghcr.io/home-assistant/amd64-base-debian:bookworm
+        # ghcr.io/home-assistant/aarch64-base-debian:bookworm
+        BUILD_FROM: debian:bookworm-slim
+    container_name: openclaw-gateway
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./test-data:/data
+      - ./test-config:/config
+      - ./test-share:/share
+    environment:
+      - TZ=UTC

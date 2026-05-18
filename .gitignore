@@ -1,0 +1,5 @@
+openclaw-gateway/test-config/
+openclaw-gateway/test-share/
+openclaw-gateway/test-data/*
+!openclaw-gateway/test-data/options.json
+!openclaw-gateway/test-data/.gitkeep

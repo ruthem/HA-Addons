@@ -1,0 +1,10 @@
+{
+  "workspace_path": "/config/openclaw",
+  "timezone": "UTC",
+  "enable_terminal": true,
+  "terminal_port": 7681,
+  "gateway_mode": "local",
+  "gateway_port": 18789,
+  "access_mode": "custom",
+  "gateway_auth_mode": "token"
+}
